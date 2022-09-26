@@ -4,6 +4,74 @@
   <meta charset="utf-8" />
   <title>Principato Italian Cuisine</title>
   <link href="css/style.css" rel="stylesheet" />
+
+  <script>
+    function kudeatzaileakHasieratu(){
+
+    //irudiaren gainean klik egin
+    let irudia= document.getElementById('image')
+    irudia.onclick=function(){
+    alert('kaixo')
+    }
+
+    //placeholder simulatu
+    let input= document.getElementById('user')
+    input.value ="your@email"
+    input.onfocus= function(event){
+      let non =event.target
+      if (non.value=='your@email'){
+        non.value=''
+      }
+    }
+
+    input.onblur= function(event){
+      let non=event.target
+      if(non.value==""){
+        non.value="your@email"
+      }
+    }
+
+    function comboHandler(event){
+      let non=event.target
+      console.log(non.value)
+      console.log(non.selectedIndex)
+      console.log(non.options[non.selectedIndex].text)
+
+    }
+
+    //Lo mismo baie arrow funtzioarekin
+    /*let comboHandler= (event)=>{
+      let non=event.target
+      console.log(non.value)
+      console.log(non.selectedIndex)
+      console.log(non.options[non.selectedIndex].text)
+
+    }*/
+
+    let combo= document.getElementById('combobox')
+
+    combo.addEventListener('change', comboHandler)
+
+    //Behekoa function comboHandler barik egiteko
+    /*combo.onchange= function(event){
+      let non=event.target
+      console.log(non.value)
+      console.log(non.selectedIndex)
+      console.log(non.options[non.selectedIndex].text)
+    }*/
+
+
+  }
+
+
+
+    window.onload= kudeatzaileakHasieratu
+
+  </script>
+   
+  
+
+
 </head>
 <body>
 <div class="container">
