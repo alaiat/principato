@@ -8,6 +8,9 @@
   <script>
     function kudeatzaileakHasieratu(){
 
+      
+
+
     //irudiaren gainean klik egin
     let irudia= document.getElementById('image')
     irudia.onclick=function(){
@@ -60,12 +63,37 @@
       console.log(non.options[non.selectedIndex].text)
     }*/
 
+    let index=0
+    let argazkiLista= ['images/fresas.jpg', 'images/limon.jpg','images/mandarinas.jpg','images/manzanas.jpg','images/melon.jpg','images/sesamo.jpg']
+
+    function changePicture(){
+      let irudi=document.getElementById('image')
+      irudi.style.backgroundImage='url('+argazkiLista[index]+ ')'
+      if(index==5){
+        index=0
+      }else{
+        index++
+      }
+    }
+
+    setInterval(changePicture,1000)
+    
+
+
+    
+    
+    //irudi.style.backgroundImage='url('+argazkiLista[5]+ ')'
+  
+
+
 
   }
 
 
 
     window.onload= kudeatzaileakHasieratu
+
+    
 
   </script>
    
