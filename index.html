@@ -14,7 +14,9 @@
     //irudiaren gainean klik egin
     let irudia= document.getElementById('image')
     irudia.onclick=function(){
-    alert('kaixo')
+      //alert('kaixo')
+      clearInterval(aldaketa)
+
     }
 
     //placeholder simulatu
@@ -76,13 +78,12 @@
       }
     }
 
-    setInterval(changePicture,1000)
     
+    let aldaketa= setInterval(changePicture,1000)
 
 
     
     
-    //irudi.style.backgroundImage='url('+argazkiLista[5]+ ')'
   
 
 
@@ -92,6 +93,7 @@
 
 
     window.onload= kudeatzaileakHasieratu
+    
 
     
 
