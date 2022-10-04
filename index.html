@@ -10,9 +10,21 @@
       
     //irudiaren gainean klik egin
     let irudia= document.getElementById('image')
+    let click=false
+    let aldaketa
     irudia.onclick=function(){
       //alert('kaixo')
-      clearInterval(aldaketa)
+      if(!click){
+        console.log('klikatua')
+        aldaketa= setInterval(changePicture,3000)
+        click=true
+      }else{
+        clearInterval(aldaketa)
+        click=false
+      }
+      
+      
+      
 
     }
 
@@ -76,7 +88,7 @@
     }
 
     
-    let aldaketa= setInterval(changePicture,1000)
+    
 
 
     
